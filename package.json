@@ -1,6 +1,6 @@
 {
   "name": "@msbfe/location-sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/location.cjs.js",
   "module": "dist/location.es.js",
   "browser": "dist/location.umd.js",

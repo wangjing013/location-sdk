@@ -48,13 +48,14 @@ class BaiduLocation {
   }
 
   static getLocation() {
-    return new Promise<Result>((resolve, reject) => {
+    return new Promise<Result>((resolve) => {
       window._afterGetLocation = function (data: Result) {
         logger.info("_afterGetLocation", data);
         if (data.status === 0) {
           resolve(data);
         } else {
-          reject(data);
+          logger.error(data);
+          resolve(data);
         }
       };
       BaiduLocation.loadScript();
